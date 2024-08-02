@@ -33,6 +33,10 @@
             border-radius: 50%;
             margin-bottom: 20px;
         }
+        .publication-card {
+            max-width: 600px; /* Adjust the width of publication boxes */
+            margin: 0 auto 20px; /* Center align the boxes and add margin bottom */
+        }
     </style>
 </head>
 <body>
@@ -47,9 +51,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
                     </li>
-<!--                     <li class="nav-item">
-                        <a class="nav-link" href="#research">Research</a>
-                    </li> -->
                     <li class="nav-item">
                         <a class="nav-link" href="#publications">Publications</a>
                     </li>
@@ -64,43 +65,32 @@
     <div class="sidebar text-center">
         <img src="1638283436922873993.jpg" alt="" class="about-img">
         <p><a href="https://scholar.google.com/citations?user=eKhtzKAAAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-secondary">Google Scholar</a></p>
-<!--         <p><a href="path/to/your/resume.pdf" class="btn btn-secondary" target="_blank">Resume</a></p> -->
-<!--         <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p> -->
     </div>
 
     <div class="main-content">
         <section id="about" class="py-5">
             <div class="container">
                 <h2>About Me</h2>
-                <p>I am a Ph.D. student in the Khoury College of Computer Sciences at Northeastern University, based in Boston. I am advised by Soheil Behnezhad.
-
-I joined Khoury College in 2023, focusing on graph algorithms in sublinear models, I am particulary interested in Correlation Clusterin and Matching problems.
-
-Before joining Khoury College, I worked as a research intern at ISTA, working on algorithms and computational geometry and also worked as a research intern at MPI for Computer Science, working on fairness in clustering. I got my bachelors in Sharif University of Technology in computer engineering. I was awarded the gold medal in the 37th Iranian National Mathematical Olympiad in 2018.</p>
+                <p>I am a Ph.D. student in the Khoury College of Computer Sciences at Northeastern University, based in Boston. I am advised by Soheil Behnezhad.</p>
+                <p>I joined Khoury College in 2023, focusing on graph algorithms in sublinear models, I am particularly interested in Correlation Clustering and Matching problems.</p>
+                <p>Before joining Khoury College, I worked as a research intern at ISTA, working on algorithms and computational geometry and also worked as a research intern at MPI for Computer Science, working on fairness in clustering. I got my bachelor's in Sharif University of Technology in computer engineering. I was awarded the gold medal in the 37th Iranian National Mathematical Olympiad in 2018.</p>
             </div>
         </section>
-
-<!--         <section id="research" class="py-5 bg-light">
-            <div class="container">
-                <h2>Research Interests</h2>
-                <p>Describe your research interests, areas of expertise, and any ongoing projects.</p>
-            </div>
-        </section> -->
 
         <section id="publications" class="py-5">
             <div class="container">
                 <h2>Publications</h2>
-                <div class="card mb-4">
+                <div class="card publication-card">
                     <div class="card-body">
                         <h3 class="card-title">Fully Dynamic Matching and Ordered Ruzsa-Szemerédi Graphs</h3>
                         <p class="card-text"><strong>Abstract:</strong> We present a new approach for fully dynamic matching in graphs and introduce ordered Ruzsa-Szemerédi graphs as a tool to achieve our results.</p>
                         <a href="https://arxiv.org/abs/2404.06069" target="_blank" class="btn btn-primary">Read Full Paper</a>
                     </div>
                 </div>
-                <div class="card mb-4">
+                <div class="card publication-card">
                     <div class="card-body">
                         <h3 class="card-title">Fully Dynamic Correlation Clustering: Breaking 3-Approximation</h3>
-                        <p class="card-text"><strong>Abstract:</strong> This paper addresses the problem of fully dynamic correlation clustering, presenting algorithms that break the 3-approximation barrier. </p>
+                        <p class="card-text"><strong>Abstract:</strong> This paper addresses the problem of fully dynamic correlation clustering, presenting algorithms that break the 3-approximation barrier.</p>
                         <a href="https://arxiv.org/abs/2404.06797" target="_blank" class="btn btn-primary">Read Full Paper</a>
                     </div>
                 </div>
