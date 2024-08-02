@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name </title>
+    <title>Your Name</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -11,6 +11,21 @@
         }
         .bg-dark {
             background-color: #343a40 !important;
+        }
+        .sidebar {
+            position: fixed;
+            top: 70px; /* Adjust based on navbar height */
+            left: 0;
+            bottom: 0;
+            width: 250px;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-right: 1px solid #dee2e6;
+            overflow-y: auto;
+        }
+        .main-content {
+            margin-left: 270px; /* Adjust based on sidebar width */
+            padding: 20px;
         }
         .about-img {
             max-width: 100%;
@@ -46,57 +61,66 @@
         </div>
     </nav>
 
-    
+    <div class="sidebar text-center">
+        <img src="1638283436922873993.jpg" alt="Your Name" class="about-img">
+        <h2>Your Name</h2>
+        <p><a href="path/to/your/resume.pdf" class="btn btn-secondary" target="_blank">Resume</a></p>
+        <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </div>
 
-    <section id="about" class="py-5">
-        <div class="container text-center">
-            <img src="1638283436922873993.jpg" alt="Your Name" class="about-img">
-            <h2>About Me</h2>
-            <p>Write a brief introduction about yourself, your background, and your interests.</p>
-        </div>
-    </section>
+    <div class="main-content">
+        <section id="about" class="py-5">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I am a Ph.D. student in the Khoury College of Computer Sciences at Northeastern University, based in Boston. I am advised by Soheil Behnezhad.
 
-    <section id="research" class="py-5 bg-light">
-        <div class="container">
-            <h2>Research Interests</h2>
-            <p>Describe your research interests, areas of expertise, and any ongoing projects.</p>
-        </div>
-    </section>
+I joined Khoury College in 2023, focusing on graph algorithms in sublinear models, I am particulary interested in Correlation Clusterin and Matching problems.
 
-    <section id="publications" class="py-5">
-        <div class="container">
-            <h2>Publications</h2>
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h3 class="card-title">Fully Dynamic Matching and Ordered Ruzsa-Szemerédi Graphs</h3>
-                    <p class="card-text"><strong>Abstract:</strong> We present a new approach for fully dynamic matching in graphs and introduce ordered Ruzsa-Szemerédi graphs as a tool to achieve our results.</p>
-                    <a href="https://arxiv.org/abs/2404.06069" target="_blank" class="btn btn-primary">Read Full Paper</a>
-                </div>
+Before joining Khoury College, I worked as a research intern at ISTA, working on algorithms and computational geometry and also worked as a research intern at MPI for Computer Science, working on fairness in clustering. I got my bachelors in Sharif University of Technology in computer engineering. I was awarded the gold medal in the 37th Iranian National Mathematical Olympiad in 2018.</p>
             </div>
-            <div class="card mb-4">
-                <div class="card-body">
-                    <h3 class="card-title">Fully Dynamic Correlation Clustering: Breaking 3-Approximation</h3>
-                    <p class="card-text"><strong>Abstract:</strong> This paper addresses the problem of fully dynamic correlation clustering, presenting algorithms that break the 3-approximation barrier. </p>
-                    <a href="https://arxiv.org/abs/2404.06797" target="_blank" class="btn btn-primary">Read Full Paper</a>
-                </div>
+        </section>
+
+        <section id="research" class="py-5 bg-light">
+            <div class="container">
+                <h2>Research Interests</h2>
+                <p>Describe your research interests, areas of expertise, and any ongoing projects.</p>
             </div>
-            <!-- Add more publications as needed -->
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="py-5 bg-light">
-        <div class="container">
-            <h2>Contact</h2>
-            
-            <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
-        </div>
-    </section>
+        <section id="publications" class="py-5">
+            <div class="container">
+                <h2>Publications</h2>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Fully Dynamic Matching and Ordered Ruzsa-Szemerédi Graphs</h3>
+                        <p class="card-text"><strong>Abstract:</strong> We present a new approach for fully dynamic matching in graphs and introduce ordered Ruzsa-Szemerédi graphs as a tool to achieve our results.</p>
+                        <a href="https://arxiv.org/abs/2404.06069" target="_blank" class="btn btn-primary">Read Full Paper</a>
+                    </div>
+                </div>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Fully Dynamic Correlation Clustering: Breaking 3-Approximation</h3>
+                        <p class="card-text"><strong>Abstract:</strong> This paper addresses the problem of fully dynamic correlation clustering, presenting algorithms that break the 3-approximation barrier. </p>
+                        <a href="https://arxiv.org/abs/2404.06797" target="_blank" class="btn btn-primary">Read Full Paper</a>
+                    </div>
+                </div>
+                <!-- Add more publications as needed -->
+            </div>
+        </section>
 
-    <footer class="py-4 bg-dark text-white-50 text-center">
-        <div class="container">
-            <small>&copy; 2024 Your Name. All Rights Reserved.</small>
-        </div>
-    </footer>
+        <section id="contact" class="py-5 bg-light">
+            <div class="container">
+                <h2>Contact</h2>
+                <p>Email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+            </div>
+        </section>
+
+        <footer class="py-4 bg-dark text-white-50 text-center">
+            <div class="container">
+                <small>&copy; 2024 Your Name. All Rights Reserved.</small>
+            </div>
+        </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
