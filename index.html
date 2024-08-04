@@ -37,6 +37,18 @@
             max-width: 600px; /* Adjust the width of publication boxes */
             margin: 0 auto 20px; /* Center align the boxes and add margin bottom */
         }
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                border-right: none;
+                padding: 20px 0;
+            }
+            .main-content {
+                margin-left: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -62,54 +74,57 @@
         </div>
     </nav>
 
-    <div class="sidebar text-center">
-        <img src="1638283436922873993.jpg" alt="" class="about-img">
-        <p><a href="https://scholar.google.com/citations?user=eKhtzKAAAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-secondary">Google Scholar</a></p>
-    </div>
-
-    <div class="main-content">
-        <section id="about" class="py-5">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>I am a Ph.D. student in the Khoury College of Computer Sciences at Northeastern University, based in Boston. I am advised by Soheil Behnezhad.</p>
-                <p>I joined Khoury College in 2023, focusing on graph algorithms in sublinear models, I am particularly interested in Correlation Clustering and Matching problems.</p>
-                <p>Before joining Khoury College, I worked as a research intern at ISTA, working on algorithms and computational geometry and also worked as a research intern at MPI for Computer Science, working on fairness in clustering. I got my bachelor's in Sharif University of Technology in computer engineering. I was awarded the gold medal in the 37th Iranian National Mathematical Olympiad in 2018.</p>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 sidebar text-center">
+                <img src="1638283436922873993.jpg" alt="" class="about-img">
+                <p><a href="https://scholar.google.com/citations?user=eKhtzKAAAAAJ&hl=en&oi=ao" target="_blank" class="btn btn-secondary">Google Scholar</a></p>
             </div>
-        </section>
-
-        <section id="publications" class="py-5">
-            <div class="container">
-                <h2>Publications</h2>
-                <div class="card publication-card">
-                    <div class="card-body">
-                        <h3 class="card-title">Fully Dynamic Matching and Ordered Ruzsa-Szemerédi Graphs</h3>
-                        <p class="card-text"><strong>Abstract:</strong> We present a new approach for fully dynamic matching in graphs and introduce ordered Ruzsa-Szemerédi graphs as a tool to achieve our results.</p>
-                        <a href="https://arxiv.org/abs/2404.06069" target="_blank" class="btn btn-primary">Read Full Paper</a>
+            <div class="col-lg-9 main-content">
+                <section id="about" class="py-5">
+                    <div class="container">
+                        <h2>About Me</h2>
+                        <p>I am a Ph.D. student in the Khoury College of Computer Sciences at Northeastern University, based in Boston. I am advised by Soheil Behnezhad.</p>
+                        <p>I joined Khoury College in 2023, focusing on graph algorithms in sublinear models, I am particularly interested in Correlation Clustering and Matching problems.</p>
+                        <p>Before joining Khoury College, I worked as a research intern at ISTA, working on algorithms and computational geometry and also worked as a research intern at MPI for Computer Science, working on fairness in clustering. I got my bachelor's in Sharif University of Technology in computer engineering. I was awarded the gold medal in the 37th Iranian National Mathematical Olympiad in 2018.</p>
                     </div>
-                </div>
-                <div class="card publication-card">
-                    <div class="card-body">
-                        <h3 class="card-title">Fully Dynamic Correlation Clustering: Breaking 3-Approximation</h3>
-                        <p class="card-text"><strong>Abstract:</strong> This paper addresses the problem of fully dynamic correlation clustering, presenting algorithms that break the 3-approximation barrier.</p>
-                        <a href="https://arxiv.org/abs/2404.06797" target="_blank" class="btn btn-primary">Read Full Paper</a>
+                </section>
+
+                <section id="publications" class="py-5">
+                    <div class="container">
+                        <h2>Publications</h2>
+                        <div class="card publication-card">
+                            <div class="card-body">
+                                <h3 class="card-title">Fully Dynamic Matching and Ordered Ruzsa-Szemerédi Graphs</h3>
+                                <p class="card-text"><strong>Abstract:</strong> We present a new approach for fully dynamic matching in graphs and introduce ordered Ruzsa-Szemerédi graphs as a tool to achieve our results.</p>
+                                <a href="https://arxiv.org/abs/2404.06069" target="_blank" class="btn btn-primary">Read Full Paper</a>
+                            </div>
+                        </div>
+                        <div class="card publication-card">
+                            <div class="card-body">
+                                <h3 class="card-title">Fully Dynamic Correlation Clustering: Breaking 3-Approximation</h3>
+                                <p class="card-text"><strong>Abstract:</strong> This paper addresses the problem of fully dynamic correlation clustering, presenting algorithms that break the 3-approximation barrier.</p>
+                                <a href="https://arxiv.org/abs/2404.06797" target="_blank" class="btn btn-primary">Read Full Paper</a>
+                            </div>
+                        </div>
+                        <!-- Add more publications as needed -->
                     </div>
-                </div>
-                <!-- Add more publications as needed -->
-            </div>
-        </section>
+                </section>
 
-        <section id="contact" class="py-5 bg-light">
-            <div class="container">
-                <h2>Contact</h2>
-                <p>Email: <a>ghafari.m@northeastern.edu</a></p>
-            </div>
-        </section>
+                <section id="contact" class="py-5 bg-light">
+                    <div class="container">
+                        <h2>Contact</h2>
+                        <p>Email: <a href="mailto:ghafari.m@northeastern.edu">ghafari.m@northeastern.edu</a></p>
+                    </div>
+                </section>
 
-        <footer class="py-4 bg-dark text-white-50 text-center">
-<!--             <div class="container">
-                <small>&copy; 2024. All Rights Reserved.</small>
-            </div> -->
-        </footer>
+                <footer class="py-4 bg-dark text-white-50 text-center">
+                    <div class="container">
+                        <small>&copy; 2024. All Rights Reserved.</small>
+                    </div>
+                </footer>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
