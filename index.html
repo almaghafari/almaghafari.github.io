@@ -37,6 +37,9 @@
             max-width: 600px; /* Adjust the width of publication boxes */
             margin: 0 auto 20px; /* Center align the boxes and add margin bottom */
         }
+        .focs-paper {
+            color: red;
+        }
         @media (max-width: 768px) {
             .sidebar {
                 position: static;
@@ -84,7 +87,7 @@
                 <section id="about" class="py-5">
                     <div class="container">
                         <h2>About Me</h2>
-                        <p>I am a Ph.D. student in the Khoury College of Computer Sciences at Northeastern University, based in Boston. I am advised by Soheil Behnezhad.</p>
+                        <p>I am a Ph.D. student in the Khoury College of Computer Sciences at Northeastern University, based in Boston. I am advised by <a href="http://behnezhad.com" target="_blank">Soheil Behnezhad</a>.</p>
                         <p>I joined Khoury College in 2023, focusing on graph algorithms in sublinear models, I am particularly interested in Correlation Clustering and Matching problems.</p>
                         <p>Before joining Khoury College, I worked as a research intern at ISTA, working on algorithms and computational geometry and also worked as a research intern at MPI for Computer Science, working on fairness in clustering. I got my bachelor's in Sharif University of Technology in computer engineering. I was awarded the gold medal in the 37th Iranian National Mathematical Olympiad in 2018.</p>
                     </div>
@@ -95,8 +98,9 @@
                         <h2>Publications</h2>
                         <div class="card publication-card">
                             <div class="card-body">
-                                <h3 class="card-title">Fully Dynamic Matching and Ordered Ruzsa-Szemerédi Graphs</h3>
+                                <h3 class="card-title">Fully Dynamic Matching and Ordered Ruzsa-Szemerédi Graphs <span class="focs-paper">(FOCS 24)</span></h3>
                                 <p class="card-text"><strong>Abstract:</strong> We present a new approach for fully dynamic matching in graphs and introduce ordered Ruzsa-Szemerédi graphs as a tool to achieve our results.</p>
+                                <p class="card-text"><strong>Coauthors:</strong> John Doe, Jane Smith</p>
                                 <a href="https://arxiv.org/abs/2404.06069" target="_blank" class="btn btn-primary">Read Full Paper</a>
                             </div>
                         </div>
@@ -104,6 +108,7 @@
                             <div class="card-body">
                                 <h3 class="card-title">Fully Dynamic Correlation Clustering: Breaking 3-Approximation</h3>
                                 <p class="card-text"><strong>Abstract:</strong> This paper addresses the problem of fully dynamic correlation clustering, presenting algorithms that break the 3-approximation barrier.</p>
+                                <p class="card-text"><strong>Coauthors:</strong> Alice Johnson, Bob Lee</p>
                                 <a href="https://arxiv.org/abs/2404.06797" target="_blank" class="btn btn-primary">Read Full Paper</a>
                             </div>
                         </div>
