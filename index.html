@@ -41,7 +41,7 @@
             background-color: #f8f9fa; /* Optional: Add a background color */
         }
         .publication-card h3 {
-            font-size: 1.25rem; /* Make the title even smaller */
+            font-size: 1.5rem; /* Make the title smaller */
         }
         .focs-paper {
             color: red;
@@ -53,6 +53,9 @@
             color: gray; /* Ensure link color remains gray on hover */
         }
         @media (max-width: 768px) {
+            body {
+                font-size: 0.875rem; /* Scale down font size for mobile */
+            }
             .sidebar {
                 position: static;
                 width: 100%;
@@ -62,6 +65,9 @@
             }
             .main-content {
                 margin-left: 0;
+            }
+            .publication-card h3 {
+                font-size: 1.25rem; /* Further reduce title size for mobile */
             }
         }
     </style>
