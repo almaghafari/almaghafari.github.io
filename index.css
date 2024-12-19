@@ -1,0 +1,13 @@
+<style>
+    .card-text {
+        color: black; /* Ensure text within card-text is black */
+    }
+    .card-text a {
+        color: black; /* Ensure links within card-text are black */
+        text-decoration: none; /* Optional: Remove underline from links */
+    }
+    .card-text a:hover {
+        color: black; /* Ensure link color remains black on hover */
+        text-decoration: underline; /* Optional: Add underline on hover */
+    }
+</style>
