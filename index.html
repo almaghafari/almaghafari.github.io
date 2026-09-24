@@ -1,40 +1,889 @@
-<section class="intro shell" id="about">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <div class="intro-text">
+  <meta
+    name="description"
+    content="Alma Ghafari — Ph.D. student in theoretical computer science at Northeastern University."
+  >
 
-    <h1>Alma Ghafari</h1>
+  <title>Alma Ghafari</title>
 
-    <p>
-      I am a Ph.D. student in the Khoury College of Computer Sciences at
-      Northeastern University. I am advised by
-      <a href="http://behnezhad.com/" target="_blank" rel="noopener">
-        Soheil Behnezhad
-      </a>.
-    </p>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-    <p>
-      I joined Khoury College in 2023, focusing on graph algorithms in
-      sublinear models. I am particularly interested in correlation
-      clustering and matching problems.
-    </p>
+    html {
+      scroll-behavior: smooth;
+    }
 
-    <p>
-      Prior to my Ph.D., I worked as a research intern at ISTA on algorithms
-      and computational geometry, and as a research intern at the Max Planck
-      Institute for Informatics on fairness in clustering. I received my
-      bachelor's degree in Computer Engineering from Sharif University of
-      Technology. I was awarded a gold medal in the 37th Iranian National
-      Mathematical Olympiad in 2018.
-    </p>
+    body {
+      margin: 0;
+      background: #ffffff;
+      color: #222222;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+    }
 
-    <div class="intro-links">
-      <a href="mailto:almaghafarii@gmail.com">Email</a>
+    a {
+      color: #245b8a;
+      text-decoration: none;
+    }
 
-      <a
-        href="https://scholar.google.com/citations?user=eKhtzKAAAAAJ"
-        target="_blank"
-        rel="noopener"
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: min(960px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* -----------------------
+       HEADER
+    ----------------------- */
+
+    header {
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .navbar {
+      min-height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .name {
+      color: #111111;
+      font-weight: 600;
+      font-size: 19px;
+      text-decoration: none;
+    }
+
+    .name:hover {
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #444444;
+      font-size: 14px;
+    }
+
+    /* -----------------------
+       INTRO
+    ----------------------- */
+
+    .intro {
+      display: grid;
+      grid-template-columns: 1fr 230px;
+      gap: 60px;
+      align-items: start;
+
+      padding-top: 65px;
+      padding-bottom: 55px;
+    }
+
+    h1 {
+      margin: 0 0 27px 0;
+      font-size: 34px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: #111111;
+    }
+
+    .intro p {
+      margin: 0 0 18px 0;
+      max-width: 690px;
+    }
+
+    .portrait {
+      width: 230px;
+      height: 280px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 4px;
+      display: block;
+    }
+
+    .links {
+      margin-top: 25px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 15px;
+    }
+
+    /* -----------------------
+       GENERAL SECTIONS
+    ----------------------- */
+
+    section.content-section {
+      padding: 48px 0;
+      border-top: 1px solid #eeeeee;
+    }
+
+    h2 {
+      margin: 0 0 30px 0;
+      color: #111111;
+      font-size: 25px;
+      line-height: 1.3;
+      font-weight: 600;
+    }
+
+    .subheading {
+      margin-top: 55px;
+    }
+
+    .note {
+      color: #777777;
+      font-size: 14px;
+      margin-top: -18px;
+      margin-bottom: 30px;
+    }
+
+    /* -----------------------
+       PUBLICATIONS
+    ----------------------- */
+
+    .publication {
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      gap: 15px;
+
+      padding: 21px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .publication:first-of-type {
+      padding-top: 0;
+    }
+
+    .year {
+      color: #777777;
+      font-size: 14px;
+      padding-top: 3px;
+    }
+
+    .publication h3 {
+      margin: 0 0 4px 0;
+      font-size: 17px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .publication h3 a {
+      color: #222222;
+    }
+
+    .publication h3 a:hover {
+      color: #245b8a;
+    }
+
+    .authors {
+      margin: 0;
+      color: #444444;
+      font-size: 15px;
+    }
+
+    .venue {
+      margin: 3px 0 0;
+      color: #245b8a;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* -----------------------
+       TALKS
+    ----------------------- */
+
+    .talks {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+
+    .talk {
+      border: 1px solid #e2e2e2;
+      border-radius: 5px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .video {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #f1f1f1;
+    }
+
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .talk-text {
+      padding: 20px;
+    }
+
+    .talk-text h3 {
+      margin: 0 0 10px 0;
+      font-size: 17px;
+      line-height: 1.45;
+      font-weight: 600;
+    }
+
+    .talk-text a {
+      font-size: 14px;
+    }
+
+    /* -----------------------
+       AWARDS
+    ----------------------- */
+
+    .award {
+      display: grid;
+      grid-template-columns: 75px 1fr;
+      gap: 15px;
+
+      padding: 17px 0;
+      border-bottom: 1px solid #eeeeee;
+    }
+
+    .award p {
+      margin: 0;
+    }
+
+    .award strong {
+      color: #222222;
+    }
+
+    /* -----------------------
+       FOOTER
+    ----------------------- */
+
+    footer {
+      border-top: 1px solid #e5e5e5;
+      margin-top: 30px;
+    }
+
+    .footer-content {
+      padding: 30px 0 45px;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      color: #777777;
+      font-size: 14px;
+    }
+
+    /* -----------------------
+       MOBILE
+    ----------------------- */
+
+    @media (max-width: 700px) {
+      .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+        gap: 12px;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      .intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding-top: 40px;
+      }
+
+      .portrait {
+        width: 190px;
+        height: 230px;
+      }
+
+      .talks {
+        grid-template-columns: 1fr;
+      }
+
+      .publication,
+      .award {
+        grid-template-columns: 55px 1fr;
+      }
+
+      .footer-content {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <!-- ==============================
+       HEADER
+  =============================== -->
+
+  <header>
+    <div class="container navbar">
+
+      <a class="name" href="#">
+        Alma Ghafari
+      </a>
+
+      <nav>
+        <a href="#publications">Publications</a>
+        <a href="#talks">Talks</a>
+        <a href="#awards">Awards</a>
+        <a href="Alma_Ghafari_CV.pdf" target="_blank">CV</a>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- ==============================
+         ABOUT
+    =============================== -->
+
+    <section class="container intro">
+
+      <div>
+
+        <h1>Alma Ghafari</h1>
+
+        <p>
+          I am a Ph.D. student in the Khoury College of Computer Sciences
+          at Northeastern University. I am advised by
+          <a
+            href="http://behnezhad.com/"
+            target="_blank"
+            rel="noopener"
+          >Soheil Behnezhad</a>.
+        </p>
+
+        <p>
+          I joined Khoury College in 2023, focusing on graph algorithms
+          in sublinear models. I am particularly interested in
+          correlation clustering and matching problems.
+        </p>
+
+        <p>
+          Prior to my Ph.D., I worked as a research intern at ISTA,
+          working on algorithms and computational geometry, and also
+          worked as a research intern at the Max Planck Institute for
+          Informatics, working on fairness in clustering. I got my
+          bachelor's degree from Sharif University of Technology in
+          Computer Engineering. I was awarded the gold medal in the
+          37th Iranian National Mathematical Olympiad in 2018.
+        </p>
+
+        <div class="links">
+
+          <a href="mailto:almaghafarii@gmail.com">
+            Email
+          </a>
+
+          <a
+            href="https://scholar.google.com/citations?user=eKhtzKAAAAAJ"
+            target="_blank"
+            rel="noopener"
+          >
+            Google Scholar
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/mohadese-ghafari-2bb0731b9"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="Alma_Ghafari_CV.pdf"
+            target="_blank"
+          >
+            CV
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <!-- Only one photo is used anywhere on the page -->
+      <img
+        src="Alma.png"
+        class="portrait"
+        alt="Alma Ghafari"
       >
+
+    </section>
+
+
+
+    <!-- ==============================
+         PUBLICATIONS
+    =============================== -->
+
+    <section
+      class="content-section"
+      id="publications"
+    >
+
+      <div class="container">
+
+        <h2>Recent Publications</h2>
+
+
+        <!-- Markov Chains -->
+
+        <article class="publication">
+
+          <div class="year">
+            2026
+          </div>
+
+          <div>
+
+            <h3>
+              Markov Chains with Rewinding
+            </h3>
+
+            <p class="authors">
+              Amir Azarmehr,
+              Soheil Behnezhad,
+              <strong>Alma Ghafari</strong>,
+              Madhu Sudan
+            </p>
+
+            <p class="venue">
+              RANDOM 2026
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- LCA -->
+
+        <article class="publication">
+
+          <div class="year">
+            2025
+          </div>
+
+          <div>
+
+            <h3>
+              Lower Bounds for Non-adaptive Local Computation Algorithms
+            </h3>
+
+            <p class="authors">
+              Amir Azarmehr,
+              Soheil Behnezhad,
+              <strong>Alma Ghafari</strong>,
+              Madhu Sudan
+            </p>
+
+            <p class="venue">
+              FOCS 2025
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- Stochastic Matching -->
+
+        <article class="publication">
+
+          <div class="year">
+            2025
+          </div>
+
+          <div>
+
+            <h3>
+              <a
+                href="https://arxiv.org/abs/2411.08805"
+                target="_blank"
+                rel="noopener"
+              >
+                Stochastic Matching via In-n-Out
+                Local Computation Algorithms
+              </a>
+            </h3>
+
+            <p class="authors">
+              Amir Azarmehr,
+              Soheil Behnezhad,
+              <strong>Alma Ghafari</strong>,
+              Ronitt Rubinfeld
+            </p>
+
+            <p class="venue">
+              STOC 2025
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- Correlation Clustering -->
+
+        <article class="publication">
+
+          <div class="year">
+            2025
+          </div>
+
+          <div>
+
+            <h3>
+              <a
+                href="https://arxiv.org/abs/2404.06797"
+                target="_blank"
+                rel="noopener"
+              >
+                Correlation Clustering Beyond the Pivot Algorithm
+              </a>
+            </h3>
+
+            <p class="authors">
+              Soheil Behnezhad,
+              Moses Charikar,
+              Vincent Cohen-Addad,
+              <strong>Alma Ghafari</strong>,
+              Weiyun Ma
+            </p>
+
+            <p class="venue">
+              ICML 2025
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- Dynamic Matching -->
+
+        <article class="publication">
+
+          <div class="year">
+            2024
+          </div>
+
+          <div>
+
+            <h3>
+              <a
+                href="https://arxiv.org/abs/2404.06069"
+                target="_blank"
+                rel="noopener"
+              >
+                Fully Dynamic Matching and
+                Ordered Ruzsa–Szemerédi Graphs
+              </a>
+            </h3>
+
+            <p class="authors">
+              Soheil Behnezhad,
+              <strong>Alma Ghafari</strong>
+            </p>
+
+            <p class="venue">
+              FOCS 2024
+            </p>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- ==============================
+             PREPRINTS
+        =============================== -->
+
+        <h2 class="subheading">
+          Recent Preprints
+        </h2>
+
+
+        <article class="publication">
+
+          <div class="year">
+            2026
+          </div>
+
+          <div>
+
+            <h3>
+              Caterpillar of Thoughts:
+              The Optimal Test-Time Algorithm for Large Language Models
+            </h3>
+
+            <p class="authors">
+              Amir Azarmehr,
+              Soheil Behnezhad,
+              <strong>Alma Ghafari</strong>
+            </p>
+
+            <p class="venue">
+              Preprint
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="publication">
+
+          <div class="year">
+            2026
+          </div>
+
+          <div>
+
+            <h3>
+              Streaming Algorithms for Monotonicity Testing
+            </h3>
+
+            <p class="authors">
+              Amir Azarmehr,
+              Soheil Behnezhad,
+              Lily Chung,
+              <strong>Alma Ghafari</strong>,
+              Jane Lange,
+              Ronitt Rubinfeld
+            </p>
+
+            <p class="venue">
+              Preprint
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         TALKS
+         Only talks with recordings
+         where Alma is the speaker.
+    =============================== -->
+
+    <section
+      class="content-section"
+      id="talks"
+    >
+
+      <div class="container">
+
+        <h2>Talks</h2>
+
+        <div class="talks">
+
+
+          <!-- Correlation Clustering -->
+
+          <article class="talk">
+
+            <div class="video">
+
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/i6zQxqxxX7o"
+                title="Correlation Clustering talk by Alma Ghafari"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+
+            </div>
+
+            <div class="talk-text">
+
+              <h3>
+                Sublinear Algorithms for Correlation Clustering:
+                Beyond Pivot
+              </h3>
+
+              <a
+                href="https://www.youtube.com/watch?v=i6zQxqxxX7o"
+                target="_blank"
+                rel="noopener"
+              >
+                Watch video
+              </a>
+
+            </div>
+
+          </article>
+
+
+
+          <!-- Dynamic Matching -->
+
+          <article class="talk">
+
+            <div class="video">
+
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/fXuHBmMMZPE"
+                title="Fully Dynamic Matching talk by Alma Ghafari"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+
+            </div>
+
+            <div class="talk-text">
+
+              <h3>
+                Fully Dynamic Matching and
+                Ordered Ruzsa–Szemerédi Graphs
+              </h3>
+
+              <a
+                href="https://www.youtube.com/watch?v=fXuHBmMMZPE"
+                target="_blank"
+                rel="noopener"
+              >
+                Watch video
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         AWARDS
+    =============================== -->
+
+    <section
+      class="content-section"
+      id="awards"
+    >
+
+      <div class="container">
+
+        <h2>Awards</h2>
+
+
+        <div class="award">
+
+          <div class="year">
+            2018
+          </div>
+
+          <p>
+            <strong>
+              Gold Medal, 37th Iranian National Mathematical Olympiad
+            </strong>
+          </p>
+
+        </div>
+
+
+        <div class="award">
+
+          <div class="year">
+            2023
+          </div>
+
+          <p>
+            <strong>
+              Khoury Distinguished Fellowship
+            </strong>,
+            Northeastern University
+          </p>
+
+        </div>
+
+
+        <div class="award">
+
+          <div class="year">
+            2026
+          </div>
+
+          <p>
+            <strong>
+              Gold Reviewer, ICML 2026
+            </strong>
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ==============================
+       FOOTER
+  =============================== -->
+
+  <footer>
+
+    <div class="container footer-content">
+
+      <span>
+        Alma Ghafari
+      </span>
+
+      <a href="mailto:almaghafarii@gmail.com">
+        almaghafarii@gmail.com
+      </a>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>      >
         Google Scholar
       </a>
 
